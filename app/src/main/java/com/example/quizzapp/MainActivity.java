@@ -32,11 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         play.setOnClickListener(this);
         rl1=(RelativeLayout)findViewById(R.id.r1);
         tv=(TextView)findViewById(R.id.textView);
-       /* SharedPreferences sp1=getSharedPreferences("ColorData",MODE_PRIVATE);
-        int r1= sp1.getInt("s1",0);
-        int r2= sp1.getInt("s2",0);
-        int r3= sp1.getInt("s3",0);
-        rl1.setBackgroundColor(Color.rgb(r1,r2,r3));*/
     }
 
     @Override

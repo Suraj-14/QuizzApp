@@ -19,7 +19,7 @@ public class Score extends AppCompatActivity {
         tv2=(TextView)findViewById(R.id.textView10);
         Intent i=getIntent();
         final int score=i.getIntExtra("score",0);
-        tv2.setText("Score : "+score);
+        tv2.setText(""+score);
         tv2.setTextColor(Color.GREEN);
         hd=new Handler();
         hd.postDelayed(new Runnable() {

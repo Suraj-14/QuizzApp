@@ -152,29 +152,21 @@ public class QuestionMainPage extends AppCompatActivity implements View.OnClickL
         } else {
             textViewCountDown.setTextColor(Color.BLUE);
         }
-    } // timing cod eend
+    }
 
 
     private void stopQuiz() {
-        int a=score;
-        Toast.makeText(getApplicationContext(), "Total Score is :"+a, Toast.LENGTH_LONG).show();
-        /*SharedPreferences sp=getSharedPreferences("ColorData",MODE_PRIVATE);
-        SharedPreferences.Editor ed=sp.edit();
-        ed.putInt("score",score);
-        ed.commit();*/
-        Intent in=new Intent(QuestionMainPage.this,Score.class);
-        in.putExtra("score",a);
+        int a = score;
+        Intent in = new Intent(QuestionMainPage.this, Score.class);
+        in.putExtra("score", a);
         startActivity(in);
-        //finish();
-    }  //for finish
+    }
 
     private void checkAnswer() {   //for answer check
 
         answered = true;
         countDownTimer.cancel();
-        // Toast.makeText(this, ""+answer, Toast.LENGTH_SHORT).show();
         String answerr = ((RadioButton) findViewById(rbGroup.getCheckedRadioButtonId())).getText().toString();
-        //  Toast.makeText(this, "" + answerr, Toast.LENGTH_SHORT).show();
 
         if (answerr.equals(answer)) {
             score++;
